@@ -8,7 +8,7 @@ from src.searchsploit import searchsploit_info
 from src.hash_identify import hash_iden
 from src.cve_details import CVE_details
 from src.payload_venom import payloads_msf
-
+from src.directory_finder import Direc_find
 RED='\033[0;31m'
 nc='\033[0m'
 green='\033[0;32m'
@@ -73,6 +73,8 @@ elif a=="5":
 
 elif a=="6":
 	cve_detalis()
+	directory_finder()
 	print()
 	data=input("Enter the Command:- ")
 	CVE_details(data)
+	Direc_find(data)
