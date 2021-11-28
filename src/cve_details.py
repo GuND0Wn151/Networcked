@@ -1,12 +1,7 @@
-from logo import logo_print
 from bs4 import BeautifulSoup
 import os
 import time
 import requests
-
-logo_print()
-
-
 RED='\033[0;31m'
 NC='\033[0m'
 green='\033[0;32m'
