@@ -31,7 +31,6 @@ print(RED+"\t\n------------------------------"+nc+"\n")
 a=input("Choose The Category:- ")
 if a=="1":
 	apache_server()
-	directory_finder()
 	print()
 	data=input("Enter the Command:- ")
 
