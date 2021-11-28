@@ -5,7 +5,11 @@ def Owasp_top():
 	print(green+"\n-----Owasp-top-10-----")
 	print(green+"\nThis option tell about the 10 most common application vulnerabilities.\n\ncommand:\n\netw --info or netw --i\nthen it will provide you list of those vulneabilites\n\nselect any one of them to know about them."+nc)
 
-
+def password():
+	nc='\033[0m'
+	green='\033[0;32m'
+	print(green+"\n-----cve_detalis-----")
+	print(green+"\nThis option is used to crack passwords\ncommand:\nnetw --pass"+nc)
 
 def cve_detalis():
 	nc='\033[0m'
