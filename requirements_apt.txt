@@ -1,4 +1,0 @@
-nmap
-rubygems
-haiti-hash
-python3
