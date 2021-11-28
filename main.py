@@ -69,6 +69,7 @@ elif a=="4":
 
 elif a=="5":
 	hash_identify()
+	password()
 	print()
 	data=input("Enter the Command:- ")
 	hash_iden(data)
