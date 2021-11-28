@@ -9,6 +9,9 @@ from src.hash_identify import hash_iden
 from src.cve_details import CVE_details
 from src.payload_venom import payloads_msf
 from src.directory_finder import Direc_find
+from src.password_crack import password_find
+
+
 RED='\033[0;31m'
 nc='\033[0m'
 green='\033[0;32m'
@@ -24,7 +27,7 @@ print(cyan+"\t\n1. Python/Apache Server")
 print("\t\n2. Port Scanning Using Nmap ")
 print("\t\n3. Documentations and Information")
 print("\t\n4. Scripts and Payloads")
-print("\t\n5. Hashes Identifer")
+print("\t\n5. Hashes Identifer and Password")
 print("\t\n6. Directory and CVE Details"+nc)
 print(RED+"\t\n------------------------------"+nc+"\n")
 
@@ -69,6 +72,7 @@ elif a=="5":
 	print()
 	data=input("Enter the Command:- ")
 	hash_iden(data)
+	password_find(data)
 
 elif a=="6":
 	cve_detalis()
