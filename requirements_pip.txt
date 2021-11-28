@@ -1,0 +1,5 @@
+os
+webbrowser
+BeautifulSoup
+requests
+subprocess
