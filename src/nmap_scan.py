@@ -13,18 +13,19 @@ def print_ports(data):
 		if "Nmap done" in i:
 			break
 
-def nmap_scan(a,ip):
-	params=""
-	for i in a:
-		if i[:2]=="--":
-			params+=i+" "
-		try:
-			x=command("nmap "+params+ip)
-			x=str(x).split(r'\n')
-			return(x)
-		
-		except:
-			print("Please enter a valid IP or Valid Paramaters!")
+def nmap_scan_extra(a,ip):
+	if "--extra" in a:
+		params=""
+		for i in a:
+			if i[:2]=="--":
+				params+=i+" "
+			try:
+				x=command("nmap "+params+ip)
+				x=str(x).split(r'\n')
+				return(x)
+			
+			except:
+				print("Please enter a valid IP or Valid Paramaters!")
 
 def nmap_scan(a):
 	
