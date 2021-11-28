@@ -1,4 +1,4 @@
-top 10 vulnerabilities
+#top 10 vulnerabilities
 
 dict={
     1:"Injection occurs when an attacker exploits insecure code to insert (or inject) their own code into a program.\nBecause the program is unable to determine code inserted in this way from its own code, attackers are able to use injection attacks to access secure areas and confidential information as though they are trusted users.\nExamples of injection include SQL injections, command injections, CRLF injections, and LDAP injections. Application security testing can reveal injection flaws and suggest remediation techniques such as stripping special characters from user input or writing parameterized SQL queries.",
