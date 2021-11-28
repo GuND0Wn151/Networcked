@@ -54,7 +54,7 @@ elif a=="3":
 	Owasp_top()
 	print()
 	data=input("Enter the Command:- ")
-	get_top_10()
+	get_top_10(data)
 
 
 elif a=="4":
