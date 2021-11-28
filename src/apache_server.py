@@ -2,8 +2,7 @@ import os
 import time
 import webbrowser
 from subprocess import PIPE, run
-from logo import logo_print
-logo_print()
+
 def command(cmd):
 	return run(cmd, stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
 
@@ -11,11 +10,13 @@ def command(cmd):
 
 
 def start_server(a):
+	a=a.split()
 	if(a[0]=="netw"):
-		if "--se" in a:
+		if "--server" in a:
 			t="sudo service apache2 start -D "+a[2]
 			x=command(t)
 			webbrowser.open("http://localhost/")
+			
 		if '--file' in a:
 			command('sudo rm /var/www/html/index.nginx-debian.html')
 			print()
