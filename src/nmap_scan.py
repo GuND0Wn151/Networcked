@@ -47,7 +47,7 @@ def nmap_scan_extra(a,ip):
 				print("Please enter a valid IP or Valid Paramaters!")
 
 def nmap_scan(a):
-	
+	a=a.split()
 	if a[0]=="netw":
 		try:
 			if "--scan" or "--s" in a:
@@ -69,14 +69,11 @@ def nmap_scan(a):
 				time.sleep(1)
 				os.system("echo '\033[0;32m [Got The Info !!] \033'")
 				print()
-				ip=""
-				for i in a:
-					if i.count('.')>2:
-						ip=i
-						a.remove(i)
-				if ip!="":
-					data=nmap_scan(a,ip)
-					print_ports(data)
+				ip=a[2]
+				data=command("nmap "+ip)
+				data=str(data).split(r'\n')
+				print(data)
+				print_ports(data)
 				
 				if "Host seems down" in data:
 					print("The Host is down")
