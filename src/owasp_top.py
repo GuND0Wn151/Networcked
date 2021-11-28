@@ -13,7 +13,7 @@ dict={
     10:"Failing to log errors or attacks and poor monitoring practices can introduce a human element to security risks. Threat actors count on a lack of monitoring and slower remediation times so that they can carry out their attacks before you have time to notice or react.To prevent issues with insufficient logging and monitoring, make sure that all login failures, access control failures, and server-side input validation failures are logged with context so that you can identify suspicious activity.\nPenetration testing is a great way to find areas of your application with insufficient logging too. Establishing effective monitoring practices is also essential."
           }
 def get_top_10(a):
-    a=input().split()
+    a=a.split()
     if a[0]=="netw":
         if(a[1]== "--info" or a[1]=="--i"):
             print("Top 10 Vulnerabilities")
