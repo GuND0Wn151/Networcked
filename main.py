@@ -4,10 +4,10 @@ from src.apache_server import start_server
 from src.directory_finder import Direc_find
 from src.nmap_scan import *
 from src.owasp_top import get_top_10
-from src.searchsploit import searchsploit
+from src.searchsploit import searchsploit_info
 from src.hash_identify import hash_iden
 from src.cve_details import CVE_details
-
+from src.payload_venom import payloads_msf
 
 RED='\033[0;31m'
 nc='\033[0m'
@@ -63,7 +63,7 @@ elif a=="4":
 	print()
 	data=input("Enter the Command:- ")
 	payloads_msf(data)
-	searchsploit(data)
+	searchsploit_info(data)
 
 elif a=="5":
 	hash_identify()
