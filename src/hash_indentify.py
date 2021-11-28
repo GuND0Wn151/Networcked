@@ -4,7 +4,7 @@ from subprocess import PIPE, run
 def command(cmd):
 	return run(cmd, stdout=PIPE, stderr=PIPE, universal_newlines=True, shell=True)
 
-def hash_identify(a):
+def hash_iden(a):
 
 	if "--hash" in a:
 		print("The Possible Hashes Can be:- ")
