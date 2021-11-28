@@ -54,6 +54,7 @@ def CVE_details(n):
 			   label=v
 			   print(f"{orange}{k}{NC} : {green}{label} {NC} ")
 			   #print("\n")
-			
+		
+		
 # a=input('Enter Command:')
 # CVE_details(a)          
