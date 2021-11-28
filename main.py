@@ -69,7 +69,7 @@ elif a=="5":
 	hash_identify()
 	print()
 	data=input("Enter the Command:- ")
-	hash_iden()
+	hash_iden(data)
 
 elif a=="6":
 	cve_detalis()
