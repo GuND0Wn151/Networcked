@@ -32,14 +32,21 @@ extentions={
 }
 
 def payloads_msf(a):
-	if "--payload" in a:
-		data=payloads[a[2]]
-		
-		host=" LHOST="+str(a[3])
-		port=" LPORT="+str(a[4])
-		
-		
-		print(data+host+port+extentions[a[2]])
-		command(data+host+port+extentions[a[2]])
+	#netw --payload linux/python/etc lhost lport
+
+	a=a.split()
+	if "netw" in a:
+		if "--payload" in a:
+			try:
+				data=payloads[a[2]]
+				
+				host=" LHOST="+str(a[3])
+				port=" LPORT="+str(a[4])
+				
+				
+				print(data+host+port+extentions[a[2]])
+				command(data+host+port+extentions[a[2]])
+			except:
+				print("Module Not Found!\n")
 # a=input("Enter Your Command: ").split()
 # payloads_msf(a)
