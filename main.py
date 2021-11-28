@@ -40,14 +40,14 @@ if a=="1":
 	
 
 elif a=="2":
-	nmap_scan()
+	nmap()
 	print()
 	data=input("Enter the Command:- ")
 	if "--extra" in data:
 		ip=input("Enter the IP:- ")
 		nmap_scan_extra(data,ip)
 	else:
-		nmap_scan()
+		nmap_scan(data)
 
 elif a=="3":
 	Owasp_top()
