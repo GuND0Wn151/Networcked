@@ -67,16 +67,26 @@ def nmap_scan(a):
 				os.system("echo '\033[0;31m [Retrieving  the Data] \033[0m  Almost there.....'")
 				print()
 				time.sleep(1)
-				os.system("echo '\033[0;32m [Got The Info !!] \033'")
+				os.system("echo '\033[0;32m [Got The Info !!] \033'"+NC)
 				print()
 				ip=a[2]
-				data=command("nmap "+ip)
-				data=str(data).split(r'\n')
-				print(data)
-				print_ports(data)
+				data=command("nmap "+ip).stdout
+				t=0
+				for i in range(len(data)):
+					if "PORT" in data[i:i+5]:
+						t=1
+					if t==1:
+						print(data[i],end='')
+					if "Nmap" in data[i:i+5]:
+						t=0
+				print(t)
+				print("hello")
+				#print(data)
+				#print(str(data))
+				#print_ports(data)
 				
 				if "Host seems down" in data:
 					print("The Host is down")
-				print_ports(data)
+				
 		except:
 			print("Incorrect Command Please Enter Proper Parameters")
