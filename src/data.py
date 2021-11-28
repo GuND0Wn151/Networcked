@@ -18,7 +18,7 @@ def apache_server():
 	nc='\033[0m'
 	green='\033[0;32m'
 	print(green+"\n-----apache_server-----")
-	print(green + "\nThis option is used to start an Apache server.\ncommand:\nnetw --se"+nc)
+	print(green + "\nThis option is used to start an Apache server.\ncommand:\nnetw --server"+nc)
 
 
 def directory_finder():
