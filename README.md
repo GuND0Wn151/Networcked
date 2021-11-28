@@ -20,8 +20,7 @@ There are some tools which are used in this project in-order to use them, you ne
 
 You can install all the required dependencies using the following commands.
 ~~~ 
-xargs -a requirements_apt.txt sudo apt-get install
-sudo pip install -r requirements_pip.txt
+  python3 requirements.py
 ~~~
   
 In order to use the tool run the main.py with python3.7  or above
