@@ -8,7 +8,7 @@ def Owasp_top():
 def password():
 	nc='\033[0m'
 	green='\033[0;32m'
-	print(green+"\n-----cve_detalis-----")
+	print(green+"\n-----password_detalis-----")
 	print(green+"\nThis option is used to crack passwords\ncommand:\nnetw --pass"+nc)
 
 def cve_detalis():
